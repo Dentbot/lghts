@@ -2891,12 +2891,6 @@ const channel = sWlc[message.guild.id].channel
     sWlc[message.guild.id].channel = newChannel
     message.channel.send(`**${message.guild.name}'s channel has been changed to ${newChannel}**`);
   }
-});
-client.on("ready", () => {
-  console.log("Vulnix | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`Support Magic |${prefix}new`);
-});
- 
  
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
